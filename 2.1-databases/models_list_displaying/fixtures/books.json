@@ -1,20 +1,29 @@
 [
-  {
-    "model": "books.book",
-    "pk": 1,
-    "fields": {
-      "name": "Война и мир",
-      "author": "Л.Н. Толстой",
-      "pub_date": "2018-02-27"
+    {
+        "model": "books.book",
+        "pk": 1,
+        "fields": {
+            "name": "Война и мир",
+            "author": "Лев Толстой",
+            "pub_date": "2018-02-27"
+        }
+    },
+    {
+        "model": "books.book",
+        "pk": 2,
+        "fields": {
+            "name": "1984",
+            "author": "Джордж Оруэлл",
+            "pub_date": "2016-12-06"
+        }
+    },
+    {
+        "model": "books.book",
+        "pk": 3,
+        "fields": {
+            "name": "Мастер и Маргарита",
+            "author": "Михаил Булгаков",
+            "pub_date": "2021-09-15"
+        }
     }
-  },
-  {
-    "model": "books.book",
-    "pk": 2,
-    "fields": {
-      "name": "1984",
-      "author": "Джордж Оруэл",
-      "pub_date": "2016-12-06"
-    }
-  }
 ]

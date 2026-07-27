@@ -1,7 +1,11 @@
+from django.contrib import admin
 from django.urls import path
-from . import views
+
+from phones.views import catalog, phone_detail
+
 
 urlpatterns = [
-    path('catalog/', views.catalog, name='catalog'),
-    path('catalog/<slug:slug>/', views.phone_detail, name='phone_detail'),
+    path('admin/', admin.site.urls),
+    path('catalog/', catalog, name='catalog'),
+    path('catalog/<slug:slug>/', phone_detail, name='phone_detail'),
 ]

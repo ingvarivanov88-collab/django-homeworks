@@ -1,24 +1,24 @@
-{% extends "base.html" %}
-{% load static %}
+{% extends 'base.html' %}
 
-{% block title %}Каталог книг{% endblock %}
+{% block title %}Все книги{% endblock %}
 
 {% block content %}
-<div class="container">
-    <div class="header">
-        <h1><a href="/books">Каталог</a></h1>
-    </div>
-
+    <h1 class="mb-4">📚 Каталог книг</h1>
     <div class="row">
         {% for book in books %}
-        <div class="book col-md-4">
-            <h2>{{ book.name }}</h2>
-            <p>Автор: {{ book.author }}</p>
-            <p>Дата публикации: {{ book.pub_date|date:"Y-m-d" }}</p>
-        </div>
+            <div class="col-md-4 mb-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ book.name }}</h5>
+                        <p class="card-text">
+                            <strong>Автор:</strong> {{ book.author }}<br>
+                            <strong>Дата публикации:</strong> {{ book.pub_date|date:"Y-m-d" }}
+                        </p>
+                    </div>
+                </div>
+            </div>
         {% empty %}
-        <p>Нет книг в каталоге.</p>
+            <p>Книг пока нет.</p>
         {% endfor %}
     </div>
-</div>
 {% endblock %}

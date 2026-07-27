@@ -1,6 +1,7 @@
 from django.shortcuts import render, get_object_or_404
 from .models import Phone
 
+
 def catalog(request):
     sort = request.GET.get('sort')
     phones = Phone.objects.all()
@@ -14,6 +15,7 @@ def catalog(request):
 
     return render(request, 'catalog.html', {'phones': phones})
 
+
 def phone_detail(request, slug):
     phone = get_object_or_404(Phone, slug=slug)
-    return render(request, 'phone_detail.html', {'phone': phone})
+    return render(request, 'product.html', {'phone': phone})  # ← здесь product.html
