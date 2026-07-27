@@ -16,6 +16,10 @@ Including another URLconf
 
 from django.urls import path
 
+from django.contrib import admin
+from django.urls import path, include
+
 urlpatterns = [
-    # здесь зарегистрируйте вашу view-функцию
+    path('admin/', admin.site.urls),
+    path('', include('calculator.urls')),
 ]

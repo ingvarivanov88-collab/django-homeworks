@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Рецепты</title>
+</head>
+<body>
+    <h1>Доступные рецепты</h1>
+    <ul>
+        {% for recipe in recipes %}
+            <li><a href="/{{ recipe }}/">{{ recipe }}</a></li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

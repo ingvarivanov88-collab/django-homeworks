@@ -57,7 +57,7 @@ ROOT_URLCONF = 'pagination.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR / 'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -132,3 +132,14 @@ BUS_STATION_CSV = os.path.join(BASE_DIR, 'data-398-2018-08-30.csv')
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+# Исправление ошибки с русскими буквами в имени пользователя
+import socket
+
+
+def getfqdn(name=''):
+    return 'localhost'
+
+
+socket.getfqdn = getfqdn

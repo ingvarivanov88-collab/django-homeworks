@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Остановки транспорта</title>
+</head>
+<body>
+    <h1>Список остановок</h1>
+
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Название</th>
+                <th>Округ</th>
+                <th>Район</th>
+                <th>Широта</th>
+                <th>Долгота</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for station in bus_stations %}
+            <tr>
+                <td>{{ station.Name }}</td>
+                <td>{{ station.AdmArea }}</td>
+                <td>{{ station.District }}</td>
+                <td>{{ station.Latitude_WGS84 }}</td>
+                <td>{{ station.Longitude_WGS84 }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <div style="margin-top: 20px;">
+        {% if page.has_previous %}
+            <a href="?page={{ page.previous_page_number }}">◀ Предыдущая</a>
+        {% endif %}
+
+        Страница {{ page.number }} из {{ page.paginator.num_pages }}
+
+        {% if page.has_next %}
+            <a href="?page={{ page.next_page_number }}">Следующая ▶</a>
+        {% endif %}
+    </div>
+</body>
+</html>
