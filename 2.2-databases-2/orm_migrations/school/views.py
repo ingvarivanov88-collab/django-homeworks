@@ -5,6 +5,6 @@ def students_list(request):
     template = 'school/students_list.html'
     students = Student.objects.all().order_by('group')
     context = {
-        'students': students,  # передаём список учеников
+        'students': students,
     }
     return render(request, template, context)
