@@ -40,3 +40,14 @@ Content-Type: application/json
 # фильтрация по дате
 GET {{baseUrl}}/advertisements/?created_at_before=2020-10-01
 Content-Type: application/json
+
+
+POST http://127.0.0.1:8000/api/advertisements/
+Authorization: Token c7d5caf860f04733e18701f3feb5ed3aceb4453c
+Content-Type: application/json
+
+{
+    "title": "Продам велосипед",
+    "description": "Хороший велосипед, почти новый. Подходит для города.",
+    "status": "OPEN"
+}

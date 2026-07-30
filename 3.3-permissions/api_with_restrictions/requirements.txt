@@ -1,4 +1,3 @@
-django
+Django
 djangorestframework
-psycopg2-binary
 django-filter
