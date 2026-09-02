@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 name: Django CI
 
 on:
@@ -16,22 +17,18 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
-
     - name: Set up Python ${{ matrix.python-version }}
       uses: actions/setup-python@v3
       with:
         python-version: ${{ matrix.python-version }}
-
     - name: Install Dependencies
       run: |
         cd 3.2-crud/stocks_products/
         python -m pip install --upgrade pip
         pip install -r requirements.txt
-
     - name: Run Tests
       env:
         SECRET_KEY: "test-secret-key-for-github-actions"
-        DEBUG: "True"
       run: |
         cd 3.2-crud/stocks_products/
-        python manage.py test
+        python manage.py test>>>>>>> d3b3eb5 (Добавил Dockerfile для Nginx и Django, исправил кодировку, добавил gunicorn в requirements.txt)
