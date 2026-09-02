@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 name: Django CI
 
 on:
@@ -31,4 +30,4 @@ jobs:
         SECRET_KEY: "test-secret-key-for-github-actions"
       run: |
         cd 3.2-crud/stocks_products/
-        python manage.py test>>>>>>> d3b3eb5 (Добавил Dockerfile для Nginx и Django, исправил кодировку, добавил gunicorn в requirements.txt)
+        python manage.py test
